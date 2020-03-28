@@ -1,4 +1,4 @@
-documentclass{article}
+\documentclass{article}
 \usepackage[utf8]{inputenc}
 \date{}
 
@@ -18,7 +18,7 @@ documentclass{article}
 Our project is concerned with a service system with servers/agents that are invited on demand. Agents in this scenario may be costly depending on if they are so-called “special agents” so they are invited only on special instances where their expertise is required as to minimize wasting resources. The system has two components: the difference between the queues of agents and customers and the number of pending invitations for agents. The model establishes that in the asymptotic regime, that is when the customer arrival rate goes to infinity and the agents’ response rate is fixed, both customer and agent waiting times vanish when the system reaches a steady state. In this model the service time itself is not considered, and the customer arrival is modelled via a Poisson arrival process, and the agent responses is an i.i.d exponential distribution. The two variables: the difference between the agent/customer queues and the number of pending invitations are modelled via a CTMC (Continuous Time Markov Chain). Due to the difficulty of modelling the process exactly the analysis is done in the asymptotic regime mentioned earlier, which is known as the many-server asymptotic regime. The paper shows that when the customer arrival rate becomes constant the model converges to a fluid limit and uniform global stability of fluid limits. We will show the proof of this first theorem which deals with properties of fluid limits by considering fluid models, defined as locally Lipschitz continuous trajectories (y,x) satisfying the properties in Theorem 1. In other words, if a fluid limit exists (which we prove in this report) it is it is necessarily a fluid model. Then we will prove theorem 2 in the paper showing that the model exhibits process stochastic stability and the limit interchange property. In addition, we will prove that on the diffusion scale, which is represented by r1/2 scale, where r is a scaling parameter, convergence goes to the diffusion limit process  (theorem 3).  Finally, for the stochastic model tightness and limit-interchange results are proven for the model. A simulation will then be conducted which will aim to observe that the unique fluid limit trajectory provides a good approximation of the system dynamics.
 
 	\maketitle
-	\newpage
+
 	\setcounter{secnumdepth}{0}
 	
 	\section{Proofs of Theorems}
