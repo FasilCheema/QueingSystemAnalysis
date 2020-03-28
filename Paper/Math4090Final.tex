@@ -1,8 +1,8 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 
-\title{Title}
-\author{Authors: Fasil Cheema}
+\title{A service system with on-demand agent invitations by Guodong Pang and Alexander L. Stolyar }
+\author{Authors:  Ajanthan Mathialagan 214949861, Fasil Cheema 214427876, Marisa Signorile 214724108}
 \date{Month Day, Year}
 
 \usepackage{natbib}
@@ -12,19 +12,101 @@
 
 
 \begin{document}
-	\newpage
-	
+\newpage
+\begin{center} \section*{A service system with on-demand agent invitations} \end{center}
+\newline
+\begin{center} Guodong Pang · Alexander L. Stolyar \end{center}
+\vspace*{+3cm}
+\newline \begin{center} \large Ajanthan Mathialagan 214949861 \end{center}
+\newline \begin{center} \large Fasil Cheema 214427876 \end{center}
+\newline \begin{center}\large  Marisa Signorile 214724108 \end{center}
+
+	\section{Summary}
+Our project is concerned with a service system with servers/agents that are invited on demand. Agents in this scenario may be costly depending on if they are so-called “special agents” so they are invited only on special instances where their expertise is required as to minimize wasting resources. The system has two components: the difference between the queues of agents and customers and the number of pending invitations for agents. The model establishes that in the asymptotic regime, that is when the customer arrival rate goes to infinity and the agents’ response rate is fixed, both customer and agent waiting times vanish when the system reaches a steady state. In this model the service time itself is not considered, and the customer arrival is modelled via a Poisson arrival process, and the agent responses is an i.i.d exponential distribution. The two variables: the difference between the agent/customer queues and the number of pending invitations are modelled via a CTMC (Continuous Time Markov Chain). Due to the difficulty of modelling the process exactly the analysis is done in the asymptotic regime mentioned earlier, which is known as the many-server asymptotic regime. The paper shows that when the customer arrival rate becomes constant the model converges to a fluid limit and uniform global stability of fluid limits. We will show the proof of this first theorem which deals with properties of fluid limits by considering fluid models, defined as locally Lipschitz continuous trajectories (y,x) satisfying the properties in Theorem 1. In other words, if a fluid limit exists (which we prove in this report) it is it is necessarily a fluid model. Then we will prove theorem 2 in the paper showing that the model exhibits process stochastic stability and the limit interchange property. In addition, we will prove that on the diffusion scale, which is represented by r1/2 scale, where r is a scaling parameter, convergence goes to the diffusion limit process  (theorem 3).  Finally, for the stochastic model tightness and limit-interchange results are proven for the model. A simulation will then be conducted which will aim to observe that the unique fluid limit trajectory provides a good approximation of the system dynamics.
+
 	\maketitle
 	\newpage
 	\setcounter{secnumdepth}{0}
 	
-	\section{Section 1}
-	\subsection{Proof:}
-	Text
+	\section{Proofs of Theorems}
+	\subsection{Theorem 1}
+Consider a sequence of processes $(Y^r , X^r), r \rightarrow \infty$, with deterministic initial states such that $(Y^r(0), X^(0))\rightarrow ( y(0) ,x(0))$ for some fixed $(y(0),x(0)) \in & \mathbb{R}^2, x(0) \geq −\lambda/ \beta $. Then, these processes can be constructed on a common probability space, so that the following holds. There exists a unique locally Lipschitz trajectory (y, x), such that, w.p.1,
+\newline 
+
+\begin{center} $(Y^r , X^r)\rightarrow (y,x)$ u.o.c. as $r\rightarrow \infty$
+\end{center}
+
+\newline where
+
+\begin{center} $x(t)\geq −\lambda/ \beta t\geq 0$
+\end{center}
+and at any regular point $t \geq 0 $(all points $t\geq 0$ are regular, except a subset of zero Lebesgue measure), the following holds: if $x(t)> −\lambda/ \beta$ , 
+\begin{center} 
+\newline $y ^\prime (t) = \beta x(t)$,
+
+\newline $x ^\prime (t) = −\gamma \beta x(t) - \varepsilon y(t)$, 
+\end{center}
+and if x(t) = − $\lambda/\beta$,
+\begin{center} 
+\newline $y ^\prime (t) = -\lambda$
+
+\newline $x ^\prime (t) = [\gamma \lambda - \varepsilon y(t)] \vee 0$
+\end{center}
+The unique limit trajectory (y, x) will be called a fluid limit starting from (y(0), x(0)).
 	
-	\begin{center}
-		Text
-	\end{center}
+\subsection{Proof of Theorem 1}
+
+Given the initial state $(Y^r(0), X^r (0))$ in theorem 1, the processes will be proved for all r, that is, for $(Y^r , X^r)$:
+\newline
+\newline$Y^r(t)=Y^r(0) +N_2 (\beta \int_0^tX^r(s)ds)-N_1(\lambda rt) $
+\newline
+\newline $X^r(t)= Z^r(t) - (\min_{0\leq s\leq t} Z^r(t)) \vee 0$, since $X^r(t)$ cannot become negative.
+\newline
+\newline $Z^r(t)=X^r(0) + \gamma N_1(\lambda rt) - \gamma N_2(\beta \int_0^tX^r(s)ds) +N_3(\epsilon \int_0^t(Y^r(s))^-ds) + N_4(\epsilon \int_0^t(Y^r(s))^+ds)$
+\newline
+\newline where $N_i(\cdot)$ are independent unit rate Poisson processes for i=1,..,4.
+\newline
+\newline The functional law of large numbers holds for each Poisson process $N_i(\cdot)$:
+\newline
+\begin{center}$ N_i(rt)/r \rightarrow t,r \rightarrow \infty$, u.o.c, w.p.1
+\end{center}
+\newpage 
+Define a fluid-scaled processes with centering as
+\begin{center}
+$(Y^r , X^r):= r^{-1} (Y^r, X^r - \lambda r/\beta)$
+\end{center}
+\newline
+\newline
+Let c be a constant, where $ c \geq \| y(0), x(0) \|$. Define $(Y_c^r,X_c^r)$ as a modified fluid scaled process following the same path as $(Y^r,X^r)$ until the first time that $\|(Y^r(t),X^r(t)\| \geq c$. Denote this time as $\tau_c^r$, then, at this time, the process halts at the value $(Y^r(\tau_c^r),X^r(\tau_c^r))$. 
+\newline
+\newline Next, we need to prove convergence for the fluid scaled process:
+\newline (i) We must show the convergence of $(Y_c^r,X_c^r)$ to a limit trajectory that behaves like a fluid model as long as the state norm is away from c, constructed above.
+\newline (ii) Choose c large enough so that the limit trajectory never reaches norm level c, proving it is a unique fluid model. This will imply that on any finite time interval, w.p.1, for all large r ,$(Y_c^r, X_c^r)$ coincides with $(Y^ r , X^ r )$, where $(Y^ r , X^ r )$ converges to the fluid model.
+\newline\newline
+For the modified fluid scaled process $(Y_c^r,X_c^r)$, the associated counting process for upward and downward jumps for $t\leq \tau _c^r$ are:
+\newline
+\newline $Y_c^r \uparrow(t) = r^{-1} N_2(r\beta \int_0^t[X^r_c(s) +\lambda/\beta]ds)$
+ \newline $Y_c^r \downarrow(t) = r^{-1} N_1(\lambda rt)$
+\newline  $X_c^r \uparrow(t) = r^{-1}\gamma N_1(\lambda rt) +r^{-1} N_3 (r \epsilon \int_0^t(Y^r_c(s))^- ds)$
+\newline $X_c^r \downarrow(t) =r^{-1}\gamma N_2(r \beta \int_0^t[X^r_c(s) +\lambda/\beta]ds) +r^{-1} N_4 (r\epsilon\int_0^t(Y^r_c(s))^+ ds)$
+\newline\newline
+These counting processes are halted at time $\tau_c^r$. For 0\leq t \leq $\tau_c^r$, the original and modified processes $(Y^r , X^r)$ and $(Y_c^r,X_c^r)$ coincide. Thus,
+\newline\newline
+$Y^r_c(t)=Y^r(0) + Y_c^r \uparrow(t) - Y_c^r \downarrow(t)$
+\newline $X^r_c(t)=Z^r_c(t) + (- \lambda/ \beta - min_{0\leq s \leq t} Z^r_c (s)) \vee 0$
+\newline $Z^r_c(t)= X^r(0) + X_c^r \uparrow(t) - X_c^r \downarrow(t)$
+\newline\newline
+With the functional strong law of large numbers and the fact that the processes $Y^r_c$ and $X^r_c $ are uniformly bounded by
+construction, we see that, w.p.1. for any subsequence of r , there exists a further sub- sequence along which the set of trajectories ($Y^r_c\uparrow,Y^r_c\downarrow,X^r_c\uparrow,X^r_c\downarrow)$ converges u.o.c. to a set of non-decreasing Lipschitz continuous functions ($y^r_c\uparrow,y^r_c\downarrow,x^r_c\uparrow,x^r_c\downarrow)$. Taking the limit:
+\newline
+$y^r_c\uparrow= \beta \int_0^t(x_c(s) + \lambda/\beta) ds)$
+\newline $y^r_c\downarrow=\lambda t$
+\newline $x^r_c\uparrow= \gamma \lambda t + \int_0^t y_c^-(s)ds$
+\newline $x^r_c\downarrow= \gamma \beta \int_0^t (x_c(s) +\lambda/\beta) ds + \epsilon \int_0^t y_m^+(s) ds$
+\newline\newline
+ Along the chosen subsequence, u.o.c . convergence of $(Y^r,X^r$ to the fluid model (y ,x) holds. This means that w.p.1 the u.o.c.convergence of $(Y^r,X^r)$ to (y,x) holds for the original sequence. Thus, theorem 1 is proved. 
+
+
 	
 	\section{Section 2}
 	\subsection{Proof:}
