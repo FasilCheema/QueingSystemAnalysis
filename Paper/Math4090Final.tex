@@ -1,4 +1,4 @@
-\documentclass{article}
+documentclass{article}
 \usepackage[utf8]{inputenc}
 \date{}
 
@@ -22,7 +22,7 @@ Our project is concerned with a service system with servers/agents that are invi
 	\setcounter{secnumdepth}{0}
 	
 	\section{Proofs of Theorems}
-	\subsection{Theorem 1}
+	\section*{Theorem 1}
 Consider a sequence of processes $(Y^r , X^r), r \rightarrow \infty$, with deterministic initial states such that $(Y^r(0), X^(0))\rightarrow ( y(0) ,x(0))$ for some fixed $(y(0),x(0)) \in & \mathbb{R}^2, x(0) \geq −\lambda/ \beta $. Then, these processes can be constructed on a common probability space, so that the following holds. There exists a unique locally Lipschitz trajectory (y, x), such that, w.p.1,
 \newline 
 
@@ -47,7 +47,7 @@ and if x(t) = − $\lambda/\beta$,
 \end{center}
 The unique limit trajectory (y, x) will be called a fluid limit starting from (y(0), x(0)).
 	
-\subsection{Proof of Theorem 1}
+\section*{Proof of Theorem 1}
 
 Given the initial state $(Y^r(0), X^r (0))$ in theorem 1, the processes will be proved for all r, that is, for $(Y^r , X^r)$:
 \newline
@@ -99,45 +99,18 @@ $y^r_c\uparrow= \beta \int_0^t(x_c(s) + \lambda/\beta) ds)$
 \newline\newline
  Along the chosen subsequence, u.o.c . convergence of $(Y^r,X^r$ to the fluid model (y ,x) holds. This means that w.p.1 the u.o.c.convergence of $(Y^r,X^r)$ to (y,x) holds for the original sequence. Thus, theorem 1 is proved. 
 
-
-	
-	\section{Section 2}
-	\subsection{Proof:}
-	Text
-	\begin{center}
-		Text
-	\end{center}
-	\section{Section 3}
-	\subsection{Proof:}
-	Text
-	
-	\section{Section 4}
-	\subsection{Proof:}
-	Text
-	\begin{center}
-		Text
-	\end{center}
+ \newpage
+ \section*{Theorem 2}
+ For all sufficiently large r, the system is stable, i.e., the Markov process $(Y^r, X^r)$ is positive recurrent. The sequence of stationary distributions of the fluid- scaled processes $(Y^r , X^ r) $ converges to the Dirac measure concentrated at (0, 0).
+ 
+ \section*{Proof of Theorem 2}
+ We use lemma 5 in the paper as an assumption for this proof. That is, for any initial state (y(0), x(0)), there is a unique fluid model starting from it. Moreover, uniformly on the initial states from a given compact set, \newline $(y(t), x(t))$ \rightarrow (0, 0), 
+  $t \rightarrow \infty$  and $max_{t\geq 0}$ $\|(y(t),x(t))\|$ is bounded.
+ \newline\newline Thus, we need to prove that For all sufficiently large r, the process $(X^r,Y^r)$ is stable, with a unique stationary distribution and the sequence of stationary distributions of $(X^r,Y^r)$ is tight.
+ \newline\newline
+ Define s(t) = (Y(t), X(t)) as the random process. Next,  consider the embedded Markov chain with fixed constants $\delta > 0$ and $\tau_ {max} > 0$. For the process starting from a given state s = s(0), consider the random stopping time $ \tau _\delta $(s), which is the first time t when $| \|s(t)\| - \|s\| | \geq \delta $; we then define the stopping time $\tau$ (s)= $\tau _{\delta}$(s)∧ $\tau_{max}$. Define a sequence of stopping times $\tau^{(k)}$ , k =1,2,... by 
 	
 	
-	\begin{center}
-		Text
-	\end{center}
-	
-	\begin{center}
-		Text
-	\end{center}
-	
-	\leavevmode
-	\newline
-	
-	\section{Code}
-	
-	
-	\begin{verbatim}
-		%%insert code here 
-	\end{verbatim}
-	\leavevmode
-	\newline
 	
 	
 	
