@@ -110,7 +110,27 @@ $y^r_c\uparrow= \beta \int_0^t(x_c(s) + \lambda/\beta) ds)$
  \newline\newline
  Define s(t) = (Y(t), X(t)) as the random process. Next,  consider the embedded Markov chain with fixed constants $\delta > 0$ and $\tau_ {max} > 0$. For the process starting from a given state s = s(0), consider the random stopping time $ \tau _\delta $(s), which is the first time t when $| \|s(t)\| - \|s\| | \geq \delta $; we then define the stopping time $\tau$ (s)= $\tau _{\delta}$(s)∧ $\tau_{max}$. Define a sequence of stopping times $\tau^{(k)}$ , k =1,2,... by 
 	
-	
+\newline \newline $\tau(1)$ = $\tau$(s(0)), …
+ \newline $\tau$ (k) = [$\tau^{k - 1}$ + $\tau^{max}$] $\land $ inf($t >$ $\tau^{k - 1}$ : $\mid \|s(t)\|_\ast$ − \|s($\tau^{k-1})\|_\ast$ $\mid \geq \delta$), \newline for k = 2, 3, ... 
+ \newline\newline
+ Consider the embedded discrete-time Markov chain s(k), k = 0, 1, ..., using $\tau$(k) as sampling times. Specifically, if s(t), $t \geq 0$, is the original continuous-time Markov process, then: 
+ \newline
+ s\hat(0) = s(0), s\hat(k) = s($\tau$(k)), k = 1,2,.... 
+ \newline \newline Let $\phi$(s) = $\|s\|_\ast$. For the embedded chain $s\hat$, we show that, for some $C_1, C_2  > 0$,  uniformly in r, 
+ \newline
+ \begin{center} \mathbb{E}$[\phi^2(s \hat(1)) - \phi^2(s\hat(0)) \mid s \hat(0)] \leq  -  C_1 \phi(s \hat(0)) + C_2$. \end{center} \newline
+ For some constant $\delta_7 > 0$, for any sequence r $\rightarrow \infty$ and corresponding s\hat(0) = $s\hat^r(0) $ such that $\|s\hat^r (0)\|\ast \uparrow \infty $, we have 
+\begin{center} $\mathbf{P}[\phi(s ^r(1)) - \phi(s ^r (0)) \leq - \delta_7] \rightarrow  1 $ \end{center}
+\newline It suffices to consider a sequence such that the convergence 
+ $  \frac{1} {\|s ^r (0)\|_ \ast} s ^r ( 0 ) \rightarrow s $ holds, for some vector s with $\|s\|_\ast = 1.$
+ \newline
+We will study the behavior of the continuous-time process s(t), with initial state s(0) = $s\hat(0)$, on the interval [0, $\tau$(s(0))]. 
+\newpage
+\newline For any vector s = (y,x) we denote $s\prime = (y\prime, x\prime)$, where $y\prime = $\beta$ x, and  \newline x\prime = - \varepsilon y -\gamma \beta x $
+Similarly, let $\|s\|_\ast$ denote (d/dt)$\|s(t)\|_\ast$ when s(t) = s. 
+\newline Suppose that s=(y,x) and $x > 0$, then, (the sequence of processes can be constructed on a common probability space, such that) w.p.1, u.o.c: \newline \begin{center}
+$s(t/\|s(0)\|_\ast) - s(0)\rightarrow s\prime t $ and $ \|s(t/\|s(0)\|_\ast)\|_\ast - \| s(0)\|\ast $ \rightarrow $\|s\|\prime_\ast t $. \end{center} 
+\newline We see that $\tau$(s(0)) = $\tau _\delta$ (s(0)) $\rightarrow 0$, and therefore, \begin{center} $\mathbf{P}[\phi(s ^r(1)) - \phi(s ^r (0)) \leq - \delta_7] \rightarrow  1 $ holds with $\delta_7$ = $\delta$.\end{center}	
 	
 	
 	
