@@ -131,7 +131,21 @@ Similarly, let $\|s\|_\ast$ denote (d/dt)$\|s(t)\|_\ast$ when s(t) = s.
 \newline Suppose that s=(y,x) and $x > 0$, then, (the sequence of processes can be constructed on a common probability space, such that) w.p.1, u.o.c: \newline \begin{center}
 $s(t/\|s(0)\|_\ast) - s(0)\rightarrow s\prime t $ and $ \|s(t/\|s(0)\|_\ast)\|_\ast - \| s(0)\|\ast $ \rightarrow $\|s\|\prime_\ast t $. \end{center} 
 \newline We see that $\tau$(s(0)) = $\tau _\delta$ (s(0)) $\rightarrow 0$, and therefore, \begin{center} $\mathbf{P}[\phi(s ^r(1)) - \phi(s ^r (0)) \leq - \delta_7] \rightarrow  1 $ holds with $\delta_7$ = $\delta$.\end{center}	
-	
+Consider the sub-case when $[x(0) - (-\lambda / \beta)]/\mid x \prime \mid \rightarrow \infty $; 
+\newline \newline We check that $s(t/\|s(0)\|_\ast) - s(0)\rightarrow s\prime t $ and $ \|s(t/\|s(0)\|_\ast)\|_\ast - \| s(0)\|_\ast $ \rightarrow $\|s\|\prime_\ast t $ still holds. This is the scenario when the time $\tau _{hit}$ for the x(t) to hit boundary $-\lambda/ \beta$ is such that $\tau_{hit} \rightarrow 0$ and $\tau_{hit} \|s(0)\|_\ast \rightarrow \infty $ therefore,$ \|s(t)\|_\ast$, decreases by $\delta$ before time $\tau_{hit}$, and $\mathbf{P}[\phi(s ^r(1)) - \phi(s ^r (0)) \leq - \delta_7] \rightarrow  1 $ follows.
+\newline \newline Finally, consider the sub-case when [x (0) -$(-\lambda/ \beta)] /\mid x\prime \mid \rightarrow c  \epsilon [ 0 , \infty )$ . 
+
+\newline In this sub-case, $\tau_{hit} \|s(0)\|_\ast \rightarrow c.$ Then, we consider the process such that in the interval [0, $\tau_{hit} \|s(0)\|_\ast$] it is the process with time slowdown, as in  $s(t/ \|s(0)\|_\ast) - s(0) \rightarrow s \prime t $ and $\|s(t/\|s(0)\| _\ast∗) - \|s(0)\|_\ast \rightarrow  \|s\| _\ast t.$ From time $\tau_{hit}\|s(0)\|_\ast$ to infinity, the process continues in actual time, without slowing down. W.p.1. in the limit we obtain the trajectory which satisfies\newline $s(t/\|s(0)\|_\ast) − s(0) \rightarrow s\prime t $ and $\|s(t/\|s(0)\|_\ast)\| - \|s(0)\|_\ast \rightarrow \|s\|_\ast t $ in the interval [0, c], and then in the interval [c,$\infty$) we have x(t) = $-\lambda/\beta $ and y \prime(t) = $-\lambda$. In both intervals, the limit trajectory is such that the norm $\|s(t)\|_\ast$ is decreasing at least at some positive rate. \newline\newline
+From \mathbb{E}$[\phi^2(s \hat(1)) - \phi^2(s\hat(0)) \mid s \hat(0)] \leq  -  C_1 \phi(s \hat(0)) + C_2$ we conclude that the embedded chain is stable for each sufficiently large r , and therefore has stationary distribution which is easily seen to be unique. Moreover, the stationary distributions are such that, uniformly in (sufficiently large) r, \mathbb{E}$\phi( s\hat(\infty) \leq C_2/C_1$.
+\newline \newline We also observe that, for any fixed $C_3 > 0$, uniformly on all $\|s\|_\ast \leq C_3$ and all r, $\mathbb{E} \tau $(s)$ \geq C_4 > 0$ . Let us choose $C_3$ large enough, so that for the embedded chain in steady-state, $\mathbf{P}{\|s\hat(\infty)\|_\ast\leq C_3}\geq 1/2 $.
+\newline \newline
+Now we use the relation between stationary distributions of the original continuous- time process and the sampled chain: \newline
+$\mathbf{P}[s(\infty) \epsilon A] $ = $\mathbf{E}[ $\mathbf{E} [\int_{0}^{\tau(s(0)} I[s(t)\epsilon A dt \mid s(0)=s\hat(\infty)]]]/ [$\mathbf{E}[\tau(s\hat(\infty)$)]
+\newline 
+Then we see that our original continuous-time process is stable for each sufficiently large r, and the stationary distributions are such that, uniformly in (sufficiently large) r, we have: \newline
+
+$\mathbf{E} \|s(\infty)\| _\ast \leq \frac {\mathbf{E} \|s\hat\| _\ast + 2\delta] \tau_{max}} {C_4/2} \geq C_5 \mathbf{E}\|s(\infty)\|_\ast + C_6 \leq C_7.$
+\newline Therefore, the uniform bound on the expected norm in steady-state implies the tightness of stationary distributions.  Theorem 2 is thus, proved.	
 	
 	
 	
