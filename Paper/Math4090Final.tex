@@ -144,7 +144,34 @@ Then we see that our original continuous-time process is stable for each suffici
 
 $\mathbf{E} \|s(\infty)\| _\ast \leq \frac {\mathbf{E} \|s\hat\| _\ast + 2\delta] \tau_{max}} {C_4/2} \geq C_5 \mathbf{E}\|s(\infty)\|_\ast + C_6 \leq C_7.$
 \newline Therefore, the uniform bound on the expected norm in steady-state implies the tightness of stationary distributions.  Theorem 2 is thus, proved.	
-	
+
+\section{Theorem 3:}
+Suppose there exists a sequence of deterministic initial states, such that 
+$(\hat{Y}^{r}(0), \hat{X}^{r}(0)) \rightarrow{} (\hat{Y}(0), \hat{X}(0))$, where $(\hat{Y}(0), \hat{X}(0))$ is fixed in $\mathbb{R}^2$. Then, 
+$$(\hat{Y}^{r}, \hat{X}^{r}) \implies (\hat{Y}, \hat{X}) $$
+Where $(\hat{Y}, \hat{X})$ are unique solutions to the stochastic differential equations. 
+$$\\$$
+
+$$\boldsymbol{Proof}:$$ 
+
+We have $(\hat{Y}^{r}(0), \hat{X}^{r}(0)) \rightarrow{} (\hat{Y}(0), \hat{X}(0))$. In addition we know that $(\Bar{Y}^r,\Bar{X}^r)$ are unique solutions to the fluid scaled process such that $(\Bar{Y}^r(0),\Bar{X}^r(0)) \rightarrow{} (0,0)$. Applying Theorem 1 we have that, $(\Bar{Y}^r(t),\Bar{X}^r(t))$ converges uniformly on compact  to the fluid limit which is $((y(t),x(t)) = (0,0)$ as
+$r \rightarrow \infty$ 
+Hence, with the probability of 1.
+$$ \Bar{Y}^r \rightarrow 0, \Bar{X}^r \rightarrow{} 0$$
+gives us that, 
+$$\int_{0}^{t}\abs{\Bar{Y}^r(s)}ds \rightarrow{} 0$$ $$\int_{0}^{t}\abs{\Bar{X}^r(s)}ds \rightarrow{} 0$$ 
+which are uniformly on compact. This implies that, with the probability of 1 on a finite time set $[0,T]$, it is not hard to reach The boundary of $\hat{X}^r$ which is sufficiently large $r$ For instance,  $\hat{X}^r > -\lambda \frac{\sqrt{r}}{\beta}$
+Using the representations of $Y^r(t)$ and $X^r(t)$ in theorem 1 and We have from theorem 1 that, 
+
+$$Y^r(t) = Y^r(0) + N_2(\beta \int_{0}^{t}X^r(s)ds) - N_1(\lambda r t)$$
+$$X^r(t) = Z^r + (-\min_{0 \leq s \leq t} Z^r(s) ) \ 0$$
+$$Z^r(t) = X^r(0) + \gamma N_1(\lambda rt) - \gamma N_2(\beta \int_{0}^t X^r(s)ds) + N_3(\epsilon \int_0^t(Y^r(s))^{-}ds) - N_4(\epsilon \int_0^t(Y^r(s))^{+}ds)$$
+
+applying aspects of Lemma 9 which states. A unit rate Poisson Process $\prod (t) : t \geq 0$ can be realized as some probability space as a standard Brownian motion $\beta (t): t \geq 0$, such that there exists a random positive variable $\epsilon$ which represents a finite moment generating function in a neighbourhood of the origin. In addition holding that $Z^r = X^r$ in the representations from theorem 1. We finally get, 
+$$\hat{Y}^r(t) = Y^r(0) + \beta \int_{0}^{t}X^r(s)ds + \beta_2(\lamda t) - \beta_1(\lamda t) + \delta_1^r(t)$$
+$$\hat{X}^r(t) = \hat{X}^r(0) - \gamma \int_{0}^t \beta \hat{X}^r(s)ds - \epsilon \int_{0}^t\hat{Y}^r(s)ds + \gamma \beta_1(\lamda t) + \gamma\beta_2(\lamda t) + \delta_2^r(t)$$
+where $\delta_i^r(t)$ is a constant for $i =1,2$
+By letting $r\rightarrow{} \infty$ and applying Lemma 10 which states the mapping of a certain number $\psi$ is continuous in the topology of convergence uniformly on compact. We obtain a probability of 1. Thus the convergence which is uniformly on compact of $(\hat{Y}^r , \hat{X}^r)$ to a limiting distribution process $(\hat{Y},\hat{X})$. Thus, satisfies the convergence condition of theorem 3. 	
 	
 	
 \end{document}
