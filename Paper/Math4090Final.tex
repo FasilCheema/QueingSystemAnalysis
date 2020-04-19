@@ -172,6 +172,20 @@ $$\hat{Y}^r(t) = Y^r(0) + \beta \int_{0}^{t}X^r(s)ds + \beta_2(\lamda t) - \beta
 $$\hat{X}^r(t) = \hat{X}^r(0) - \gamma \int_{0}^t \beta \hat{X}^r(s)ds - \epsilon \int_{0}^t\hat{Y}^r(s)ds + \gamma \beta_1(\lamda t) + \gamma\beta_2(\lamda t) + \delta_2^r(t)$$
 where $\delta_i^r(t)$ is a constant for $i =1,2$
 By letting $r\rightarrow{} \infty$ and applying Lemma 10 which states the mapping of a certain number $\psi$ is continuous in the topology of convergence uniformly on compact. We obtain a probability of 1. Thus the convergence which is uniformly on compact of $(\hat{Y}^r , \hat{X}^r)$ to a limiting distribution process $(\hat{Y},\hat{X})$. Thus, satisfies the convergence condition of theorem 3. 	
-	
-	
+
+\section{Theorem 4}
+The sequence of stationary distributions of diffusion scaled processes $(\hat{Y}^r, \hat{X}^r)$ is tight. Consequently, given theorem 3, the limit interchange holds: the limit of stationary distributions of the diffusion scaled processes $(\hat{Y}^r, \hat{X}^r)$ is equal to the stationary distribution of the limit diffusion process $(\hat(Y),\hat(X))$
+$$\newline$$
+Proof: 
+
+This proof of the tightness of stationary distributions on diffusion scale—can be obtained by the following steps. 
+Firstly we need to show that show the ﬂuid-scale(r-scale)tightness of the stationary distributions of the process;in our context,it means proving that the stationary distributions of $r^{−1}(Y^r, X^r−\frac{\lambda r}{\beta})$ are tight and asymptotically concentrate at (0,0). This is shown in theorem 2 such that for all sufficiently large r, the system is stable. The sequence of stationary distributions of the fluid scaled process $(\hat{Y}^r,\hat{X}^r)$ converges to the Dirac measure concentrated at (0,0).
+$\newline$
+
+The second step is by showing that $r^{\frac{1}{2}+k}$ - scales tightness, for any k in $(0,\frac{1}{2})$. This is basically saying that the tightness of stationary distribution of $r^{−\frac{1}{2}-k}(Y^r, X^r−\frac{\lambda r}{\beta})$
+This can be shown by adapting Tightness of invariant distributions of a large-scale flexible service system under a priority discipline, which is when considering the scaling limit of the system as the arrival rate of customers and number of servers in each pool tend to infinity in proportion to a scaling parameter r. While having the overall system load remains strictly sub critical. Having to Index the systems by parameter r, we show that the system under LAP discipline is stochastically stable for all sufficiently large r and that the family of the invariant distributions is tight on scales $r^{-\frac{1}{2}+\epsilon}$ for all $\epsilon >0$ (More precisely, the sequence of invariant distributions, centered at the equilibrium point and scaled down by $r^{-\frac{1}{2}+\epsilon}$ is tight. 
+
+$\newline$
+Lastly we need to show the diffusion-scale $(r^{\frac{1}{2}})$-scale tightness is used namely $(r^{\frac{1}{2} +k}$-scale tightness at the starting point and follows that the Diffusion scale tightness of invariant distributions of a large-scale flexible service system. For instance lets a consider a large-scale service system with multiple customer classes and multiple server pools, with the mean service time depending both on the customer class and server pool. Where the allowed activities of routing choices form a tree. We then prove tightness of diffusion-scaled (centered at the equilibrium point and scaled down by $r^−{1/2}$ invariant distributions (Similar to the proof in theorem 2). As this happens, we need obtain a limit interchange result which the limit of diffusion-scaled invariant distributions is equal to the invariant distribution of the limiting diffusion process.	
+
 \end{document}
