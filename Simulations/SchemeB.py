@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Analysis of Pang and Stoylar, conducts experiments using proposed Scheme B
 with initial parameters suggested in paper.  
